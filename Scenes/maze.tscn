@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://fdrncas2tw1m"]
 
-[ext_resource type="Texture2D" uid="uid://04fuupyn20fa" path="res://darkPurple.png" id="1_g07rl"]
+[ext_resource type="Texture2D" uid="uid://04fuupyn20fa" path="res://Textures/darkPurple.png" id="1_g07rl"]
 
 [node name="Maze" type="Area2D"]
 

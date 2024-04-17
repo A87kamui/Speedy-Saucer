@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://bwvc7xle5njle"]
 
-[ext_resource type="Texture2D" uid="uid://4jen5epnixsu" path="res://purple.png" id="1_2if0k"]
-[ext_resource type="Script" path="res://level.gd" id="1_nu01v"]
-[ext_resource type="PackedScene" uid="uid://bnp5wjnijysjn" path="res://player.tscn" id="2_fx8lx"]
-[ext_resource type="PackedScene" uid="uid://fdrncas2tw1m" path="res://maze.tscn" id="4_qruv5"]
+[ext_resource type="Script" path="res://Scripts/level.gd" id="1_2virk"]
+[ext_resource type="Texture2D" uid="uid://4jen5epnixsu" path="res://Textures/purple.png" id="2_1fa1j"]
+[ext_resource type="PackedScene" uid="uid://bnp5wjnijysjn" path="res://Scenes/player.tscn" id="3_hvun0"]
+[ext_resource type="PackedScene" uid="uid://fdrncas2tw1m" path="res://Scenes/maze.tscn" id="4_s4loi"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_yuul2"]
 font_size = 32
@@ -12,7 +12,7 @@ font_size = 32
 font_size = 32
 
 [node name="Level1" type="Node2D"]
-script = ExtResource("1_nu01v")
+script = ExtResource("1_2virk")
 
 [node name="Graphics" type="Node" parent="."]
 
@@ -26,7 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_2if0k")
+texture = ExtResource("2_1fa1j")
 stretch_mode = 1
 
 [node name="StartLabel" type="Label" parent="Graphics"]
@@ -63,9 +63,9 @@ label_settings = SubResource("LabelSettings_iwoo0")
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="Player" parent="." instance=ExtResource("2_fx8lx")]
+[node name="Player" parent="." instance=ExtResource("3_hvun0")]
 
-[node name="Maze" parent="." instance=ExtResource("4_qruv5")]
+[node name="Maze" parent="." instance=ExtResource("4_s4loi")]
 z_index = -50
 
 [connection signal="body_exited" from="Maze" to="." method="_on_maze_body_exited"]
